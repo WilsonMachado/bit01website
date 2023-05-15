@@ -1,0 +1,230 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+    font-family: 'Manjari', sans-serif;  
+   
+}
+
+body{
+  background-color: #EEE9DA;
+}
+
+/*Wapper principal*/
+
+.wapper-content{
+  
+  text-align: center;  /*! Para centrar los textos */
+
+  width: 100%;         /* Para que no abarque todo el ancho de la página*/
+  height: 100%;
+   
+  display: grid;      /* Para usar CSS Grid*/
+  gap: 1em            /* Espaciado entre los elementos */
+  
+}
+
+/** --------------------------------------------- START HEADER ------------------------------------------------------------------ */
+
+/*Wapper del header*/
+
+
+/* Header Logo */
+
+.wapper-header header{
+  position: fixed;
+  width: 100%;
+  background-color: #1C315E;
+  color: #EEE9DA;
+  padding: 1em;  
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;  
+
+  
+
+}
+
+.logo{
+  font-size: 2.2rem;
+  font-style: oblique;
+}
+
+/* Botón de Toogle del Menú */
+
+.toggle-menu span{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.wapper-header input{
+  display: none;
+}
+
+.wapper-header input:checked + .nav-bar ul{
+  transform: translateY(0%);
+  transition: all 1s;
+}
+
+/* Header > Menú*/
+
+.wapper-header header nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0rem;
+  top: 70px;
+  height: 100vh;
+  width: 200px;
+  background-color: #1C315E ;
+  padding: 1rem; 
+  transform: translateY(-200%);
+  transition: all 1s;
+
+} 
+
+.wapper-header header nav ul li{  
+  padding: 1.5em;  
+  text-align: center;
+  
+} 
+
+.wapper-header header nav ul li > a{
+  
+  text-decoration: none;
+  color: #EEE9DA;
+  text-transform: uppercase;
+  padding: 1em;
+} 
+
+.wapper-header header nav ul li:hover{  
+  background-color: #BDCDD6;  
+  transition: all 0.5s ;
+} 
+
+.wapper-header header nav ul li > a:hover{
+  color: #000;
+  transition: all 0.5s ;
+} 
+
+/** --------------------------------------------- END HEADER ------------------------------------------------------------------ */
+
+/** --------------------------------------------- START MAIN ------------------------------------------------------------------ */
+
+.wrapper-main {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.wrapper-main section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding-bottom:em;
+  margin: 0em;
+  z-index: -1;
+
+  
+}
+
+.texto {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  text-align: center;
+  font-size: 3em;
+  color: #1C315E;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.wrapper-main section h2 {
+  padding-bottom: 0.7em;
+}
+
+.wrapper-main section span {
+  font-size: 10em;
+  color: #000;
+}
+
+.wrapper-main section img {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+}
+
+/** --------------------------------------------- END MAIN ------------------------------------------------------------------ */
+
+
+/*? Diseño responsive, es decir, los media queries  */
+
+@media screen and (min-width: 1024px) { /** Tamaño de escritorio*/
+
+  /** --------------------------------------------- MODIFY HEADER ------------------------------------------------------------------ */
+
+  .wapper-header header{
+    width: 100%;
+    height: 60px;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+
+  }
+
+  .nav-bar{
+    display: block;
+  }
+
+  .wapper-header header nav ul {
+    all: unset;           /* Reset de estilos hasta el momento para tener más control */
+    list-style: none;   
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .wapper-header header nav ul li{  
+    padding: 0.7em;
+    text-align: center;
+  } 
+
+  .toggle-menu{
+    display: none;
+  }
+
+  /** --------------------------------------------- END MODOFY HEADER -------------------------------------------------------------- */
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
