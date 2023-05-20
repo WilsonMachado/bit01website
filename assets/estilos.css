@@ -7,7 +7,12 @@
 }
 
 body{
-  background-color: #EEE9DA;
+  background-image: url('https://wallpapers.com/images/hd/minimalist-gray-circuit-board-3ah0h0ecob1mthp3.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
 }
 
 /*Wapper principal*/
@@ -33,6 +38,7 @@ body{
 
 .wapper-header header{
   position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: #1C315E;
   color: #EEE9DA;
@@ -40,14 +46,12 @@ body{
   display: flex;
   align-items: center;  
   justify-content: space-between;  
-
   
 
 }
 
 .logo{
   font-size: 2.2rem;
-  font-style: oblique;
 }
 
 /* Botón de Toogle del Menú */
@@ -112,62 +116,51 @@ body{
 
 /** --------------------------------------------- START MAIN ------------------------------------------------------------------ */
 
-.wrapper-main {
+.full-height {
+  height: 100vh; /* Esto hace que el div ocupe el 100% de la altura de la ventana */
   
+}
+
+/* Estilos adicionales para el contenido */
+.div-complete {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  font-size: 24px;
+  color: white;
+  opacity: 0.5;
 }
 
-.wrapper-main section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  padding-bottom:em;
-  margin: 0em;
-  z-index: -1;
-
-  
+/* Estilos de fondo para los divs */
+.div-complete:nth-child(1) {
+  background-color: #ff6347;
 }
 
-.texto {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);  
-  text-align: center;
-  font-size: 3em;
-  color: #1C315E;
+.div-complete:nth-child(2) {
+  background-color: #4169e1;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+.div-complete:nth-child(3) {
+  background-color: #32cd32;
 }
 
-.wrapper-main section h2 {
-  padding-bottom: 0.7em;
+/** --------------------------------------------- START FOOTER ------------------------------------------------------------------ */
+
+.wrapper-footer{
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #fff;
 }
 
-.wrapper-main section span {
-  font-size: 10em;
-  color: #000;
-}
-
-.wrapper-main section img {
-  width: 100%;
-  height: 100%;
-  filter: blur(3px);
-}
+/** --------------------------------------------- END FOOTER ------------------------------------------------------------------ */
 
 /** --------------------------------------------- END MAIN ------------------------------------------------------------------ */
+
 
 
 /*? Diseño responsive, es decir, los media queries  */
