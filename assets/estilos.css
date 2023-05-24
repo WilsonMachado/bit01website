@@ -180,30 +180,7 @@ img {
   margin-bottom: 10px;
 }
 
-.text {
-  word-wrap: break-word; /* Permite que el texto se ajuste automáticamente */
-}
 
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
-  }
-}
-
-/* Estilos para pantallas muy pequeñas */
-@media screen and (max-width: 480px) {
-
-  .grid-container{
-    height: 250vh;
-  }
-
-  .card {
-    grid-template-columns: 1fr;
-    padding: 10px; /* Reduce el relleno de las tarjetas en pantallas muy pequeñas */
- 
-}
-}
 
 /* Estilos generales del formulario */
 #contact-form {
@@ -293,13 +270,7 @@ input[type="submit"] {
     display: none;
   }
 
-  /* responsive para el formulario de contacto */
-@media only screen and (max-width: 600px) {
-  #contact-form {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-}
+
 
 
   /** --------------------------------------------- END MODOFY HEADER -------------------------------------------------------------- */
@@ -307,7 +278,33 @@ input[type="submit"] {
   
 }
 
+/* Para las cards del index */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+}
 
+@media screen and (max-width: 480px) {
+
+  .grid-container{
+    height: 250vh;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 10px; /* Reduce el relleno de las tarjetas en pantallas muy pequeñas */
+ 
+}
+}
+
+  /* Responsive para el formulario de contacto */
+  @media only screen and (max-width: 768px) {
+    #contact-form {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
 
 
 
