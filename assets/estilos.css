@@ -362,11 +362,15 @@ input[type="submit"] {
 }
 
 /* Para las cards del index */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
   .grid-container,
   .container-services,
   .container-about {
     grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+
+  .grid-container{
+    height: 250vh;
   }
 
   .container-services p {
@@ -378,9 +382,7 @@ input[type="submit"] {
 
 @media screen and (max-width: 480px) {
 
-  .grid-container{
-    height: 250vh;
-  }
+  
 
   .card {
     grid-template-columns: 1fr;
