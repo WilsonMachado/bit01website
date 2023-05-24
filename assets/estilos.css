@@ -228,7 +228,8 @@ img {
 
 /*Sección de SERVICIOS*/
 
-.container-services {
+.container-services,
+.container-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
@@ -237,7 +238,8 @@ img {
   padding: 10%;
 }
 
-.container-services h2{
+.container-services h2,
+.container-about h2{
   grid-column: 1/-1;
   margin-bottom: 20px;
 }
@@ -252,6 +254,14 @@ img {
   padding-right: 25%;
   text-align: justify;
 }
+
+/*Sección de NOSOTROS*/
+
+.container-about p{
+  margin: auto;
+}
+
+
 
 
 
@@ -354,7 +364,8 @@ input[type="submit"] {
 /* Para las cards del index */
 @media screen and (max-width: 768px) {
   .grid-container,
-  .container-services {
+  .container-services,
+  .container-about {
     grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
   }
 
