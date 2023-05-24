@@ -132,24 +132,23 @@ body{
   opacity: 0.9;
 }
 
-/* Estilos de fondo para los divs */
-.div-complete:nth-child(1) {
+/* Estilos de fondo para los divs del contenido */
+.div-complete{
   background-color: #EEE9DA;
 }
 
-.div-complete:nth-child(2) {
-  background-color: #EEE9DA;
-}
-
-.div-complete:nth-child(3) {
-  background-color: #EEE9DA;
-}
 
 /*Estilos generales para el saludo principal*/
 .first-content{
   display: grid;
-  grid-template-rows: 1fr 1fr;  
-  max-width: 100%; 
+  grid-template-rows: 1fr 1fr 1fr;  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  
 }
 
 /*Estilos generales para las cards*/
