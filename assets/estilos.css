@@ -204,26 +204,26 @@ img {
 
 }
 
-.demo { /* Botón */
-  background-color: #1C315E;
-  color: white;
-  border: none;
+.demo-button {
+  display: inline-block;
   padding: 10px 20px;
-  margin: auto;
-  text-align: center;
+  background-color: #1C315E;
+  color: #EEE9DA;
   text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  background-color: #13213f;
+}
+
+.demo-iframe{
+  position: relative;
   width: 90%;
-}
-
-.demo:hover {
-  background-color: #17284d;
-}
-
-.demo:active {
-  background-color: #17284d;
+  margin-top: 60px;
+  height: 100vh;
 }
 
 

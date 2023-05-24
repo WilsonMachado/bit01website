@@ -23,4 +23,6 @@ form.addEventListener('submit', function(event) {
   
   // Restablecer el formulario
   form.reset();
+
+  
 });
