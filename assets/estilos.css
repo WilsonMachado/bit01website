@@ -146,8 +146,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  
+  align-items: center;  
   
 }
 
@@ -177,6 +176,40 @@ img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+
+/* Sección de la demo en el main*/
+
+.demo-section{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.demo { /* Botón */
+  background-color: #1C315E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 90%;
+}
+
+.demo:hover {
+  background-color: #17284d;
+}
+
+.demo:active {
+  background-color: #17284d;
 }
 
 
