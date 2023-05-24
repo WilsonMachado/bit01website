@@ -160,6 +160,10 @@ body{
   grid-gap: 20px;
 }
 
+.grid-container h2{
+  grid-column: 1/-1;
+}
+
 .card {
   background-color: #f5f5f5;
   padding: 20px;
