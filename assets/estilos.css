@@ -178,6 +178,20 @@ img {
   margin-bottom: 10px;
 }
 
+/*En caso de que las imágenes no tengan las dimensiones que necesito*/
+
+.image-container {
+  width: 362px;
+  height: 220px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+
 /* Sección de la demo en el main*/
 
 .demo-section{
