@@ -147,6 +147,7 @@ body{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;  
+  padding-top: 10%;
   
 }
 
@@ -155,7 +156,8 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  height: auto;
+  
 }
 
 .grid-container h2{
@@ -181,7 +183,7 @@ img {
 /*En caso de que las imágenes no tengan las dimensiones que necesito*/
 
 .image-container {
-  width: 362px;
+  width: 300px;
   height: 220px;
 }
 
@@ -200,13 +202,12 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .demo-button {
   display: inline-block;
   padding: 10px 20px;
+  margin: 20px;
   background-color: #1C315E;
   color: #EEE9DA;
   text-decoration: none;
@@ -235,34 +236,37 @@ img {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 110vh;
   padding: 10%;
 }
+
+
 
 .container-services h2,
 .container-about h2{
   grid-column: 1/-1;
+  margin-top: 15%;
   margin-bottom: 20px;
 }
 
 .container-services img {
   max-width: 100%;
+  margin-bottom: 30px;
+  margin: auto;
 }
 
 
 .container-services p {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding: 15%;
   text-align: justify;
 }
 
 /*Sección de NOSOTROS*/
 
 .container-about p{
-  margin: auto;
+  
+  margin: 30px auto;
 }
-
-
-
 
 
 /* Estilos generales del formulario */
@@ -353,20 +357,28 @@ input[type="submit"] {
     display: none;
   }
 
+ 
 
 
 
   /** --------------------------------------------- END MODOFY HEADER -------------------------------------------------------------- */
 
   
+
+  .container-services img {
+    max-width: 100%;
+    margin: auto;
+    padding: 25px opx;
+  }
+  
 }
 
-/* Para las cards del index */
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width: 1023px) {
   .grid-container,
   .container-services,
   .container-about {
-    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
   }
 
   .grid-container{
@@ -380,9 +392,7 @@ input[type="submit"] {
 
 }
 
-@media screen and (max-width: 480px) {
-
-  
+@media screen and (max-width: 480px) {  
 
   .card {
     grid-template-columns: 1fr;
@@ -391,8 +401,36 @@ input[type="submit"] {
 }
 }
 
-  /* Responsive para el formulario de contacto */
-  @media only screen and (max-width: 768px) {
+  
+  @media screen and (min-width: 768px) {
+    .grid-container{
+      grid-template-columns: repeat(2, 1fr);
+      height: auto; 
+      gap: 20px;
+    }
+    
+    .image-container {
+      width: 320px;
+      height: 220px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }    
+    
+    .card {
+      grid-template-columns: 1fr
+      
+    }
+
+  .container-services,
+  .container-about {
+    height: 100vh;
+  }
+
+    /* Responsive para el formulario de contacto */
     #contact-form {
       max-width: 100%;
       padding: 0 10px;
