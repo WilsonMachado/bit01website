@@ -1,28 +1,68 @@
-// Obtener referencia al formulario
-const form = document.getElementById('contact-form');
-  
-// Agregar evento de envío al formulario
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevenir el envío del formulario
-  
-  // Obtener valores de los campos
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  
-  // Validar campos
-  if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-    alert('Por favor, completa todos los campos.');
-    return;
-  }
-  
-  // Mostrar mensaje de éxito
-  alert('¡Formulario enviado con éxito!');
-  
-  // Aquí puedes agregar código adicional para enviar el formulario a través de AJAX o cualquier otra acción necesaria
-  
-  // Restablecer el formulario
-  form.reset();
+// * Para determinar si el formulario está vacío
 
-  
-});
+let contactForm = document.querySelector("#contact-form");
+
+contactForm.addEventListener("submit", submitForm);
+
+function submitForm(e){     
+
+    e.preventDefault();
+    
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    
+    if (name === "" || email === "" || message === "") {
+        showErrorModal();        
+    } else {       
+        contactForm.reset();
+        showSuccessModal(name);
+      }
+}
+
+function showSuccessModal(nombre){
+    
+    let backgroudModal = document.createElement("div");
+    backgroudModal.className = "modal-bg";
+    backgroudModal.id = "modal-bg";
+
+    let modal = document.createElement("div");
+    modal.className = "modal-content";
+
+    document.getElementById("contact-form").appendChild(backgroudModal);
+    
+    backgroudModal.appendChild(modal);
+    modal.insertAdjacentHTML("beforeend", `<h3>¡Gracias por tu mensaje, ${nombre}!</h3>`);
+    modal.insertAdjacentHTML("beforeend", "<p>Hemos recibido tu mensaje y estaremos en contacto contigo tan pronto como nos sea posible.</p>");
+    modal.insertAdjacentHTML("beforeend", "<div class='contact-button button-modal'><a class='demo-button' href='javascript:hideModal()'>¡Vale!</a></div>");
+
+
+    document.getElementById("body").classList.add("no-scroll");
+}
+
+function showErrorModal(){
+
+    let backgroudModal = document.createElement("div");
+    backgroudModal.className = "modal-bg";
+    backgroudModal.id = "modal-bg";
+
+    let modal = document.createElement("div");
+    modal.className = "modal-content";
+
+    document.getElementById("contact-form").appendChild(backgroudModal);
+    
+    backgroudModal.appendChild(modal);
+    modal.insertAdjacentHTML("beforeend", `<h3>Por favor, completa todos los campos</h3>`);
+    modal.insertAdjacentHTML("beforeend", "<p>Todos los campos en el formulario son obligatorios.</p>");
+    modal.insertAdjacentHTML("beforeend", "<div class='contact-button button-modal'><a class='demo-button' href='javascript:hideModal()'>Entiendo</a></div>");
+
+    
+    document.getElementById("body").classList.add("no-scroll");
+    
+}
+
+function hideModal(){
+    let modal = document.getElementById("modal-bg");
+    document.getElementById("contact-form").removeChild(modal);
+    document.getElementById("body").classList.remove("no-scroll");
+}
